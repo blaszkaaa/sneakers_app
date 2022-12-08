@@ -1,7 +1,9 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_print
 
 import 'package:flutter/material.dart';
 import 'package:slide_action/slide_action.dart';
+
+import 'login_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -107,13 +109,19 @@ class _HomePageState extends State<HomePage> {
                     child: Icon(
                       Icons.chevron_right_rounded,
                       size: 28,
-                      color: Colors.grey,
+                      color: Colors.white,
                     ),
                   ),
                 );
               },
               action: () {
-                debugPrint("2");
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LoginPage(),
+                  ),
+                );
+                print("2");
               },
             ),
           ),
