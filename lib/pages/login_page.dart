@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:custom_input_text/custom_input_text.dart';
 import 'package:easy_loading_button/easy_loading_button.dart';
 
+import 'main_page.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -22,6 +24,12 @@ class _LoginPageState extends State<LoginPage> {
     await Future.delayed(const Duration(milliseconds: 3000), () => 42);
     return () {
       print("login");
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => MainPage(),
+        ),
+      );
     };
   }
 
