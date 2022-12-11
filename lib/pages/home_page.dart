@@ -1,132 +1,149 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_print
-
 import 'package:flutter/material.dart';
-import 'package:slide_action/slide_action.dart';
+import 'package:sneakers_app/pages/newest_shoes.dart';
 
-import 'login_page.dart';
-
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Column(
-        children: [
-          Image.asset(
-            "images/but.png",
-            scale: 1.1,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 24),
-            child: Column(
-              children: [
-                Row(
-                  children: const [
-                    Text(
-                      "Just do it with",
-                      style: TextStyle(
-                        fontSize: 26,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                    Text(
-                      " Nike",
-                      style: TextStyle(
-                        fontSize: 28,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  children: const [
-                    Text(
-                      "Get access to more than 1000 nike shoes\n also another brands with %20 off",
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w400,
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(18.0),
-            child: SlideAction(
-              trackBuilder: (context, state) {
-                return Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(36),
-                    color: Colors.grey[100],
-                  ),
-                  child: Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.chevron_right_rounded,
-                          size: 38,
-                          color: Colors.grey[400],
-                        ),
-                        Icon(
-                          Icons.chevron_right_rounded,
-                          size: 48,
-                          color: Colors.grey[400],
-                        ),
-                        const Text(
-                          "Slide to start shopping",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                );
-              },
-              thumbBuilder: (context, state) {
-                return Container(
-                  margin: const EdgeInsets.all(4),
-                  decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 255, 162, 22),
-                    borderRadius: BorderRadius.circular(36),
-                  ),
-                  child: const Center(
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(top: 35.0, left: 20, right: 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Row(
+                children: const [
+                  CircleAvatar(
+                    radius: 20,
+                    backgroundColor: Color.fromARGB(255, 216, 216, 216),
                     child: Icon(
-                      Icons.chevron_right_rounded,
-                      size: 28,
-                      color: Colors.white,
+                      Icons.dashboard,
+                      color: Colors.black,
+                    ),
+                  )
+                ],
+              ),
+              Row(
+                children: [
+                  CircleAvatar(
+                    radius: 20,
+                    backgroundColor: Color.fromARGB(255, 172, 169, 169),
+                    child: Image.asset("images/avatar.jpg"),
+                  )
+                ],
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 20, right: 20, top: 65),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Center(
+                child: Form(
+                  child: Container(
+                    width: 290,
+                    height: 50,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        borderRadius: BorderRadius.circular(10)),
+                    child: TextFormField(
+                      decoration: const InputDecoration(
+                          labelText: "Search your shoe",
+                          prefixIcon: Icon(Icons.circle_outlined),
+                          border: InputBorder.none,
+                          contentPadding: EdgeInsets.all(10)),
                     ),
                   ),
-                );
-              },
-              action: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => LoginPage(),
+                ),
+              ),
+              SizedBox(
+                width: 60,
+                height: 50,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.orange,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
                   ),
-                );
-                print("2");
-              },
-            ),
+                  child: const Icon(Icons.settings),
+                ),
+              ),
+            ],
           ),
-        ],
-      ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 18.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset(
+                "images/ad.jpg",
+                scale: 0.86,
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 20.0, right: 20, top: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: const [
+              Text(
+                "Newest nike shoes",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              TextButton(
+                onPressed: null,
+                child: Text(
+                  "See more",
+                  style: TextStyle(
+                    color: Colors.orange,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Expanded(
+            child: ListView(
+          scrollDirection: Axis.horizontal,
+          padding: const EdgeInsets.only(bottom: 100),
+          children: [
+            NewShoes(
+              shoeName: "Nike",
+              shoeModel: "Nike air max",
+              shoeImage: "images/shoe.jpg",
+            ),
+            NewShoes(
+              shoeName: "Nike",
+              shoeModel: "Nike air max",
+              shoeImage: "images/shoe.jpg",
+            ),
+            NewShoes(
+              shoeName: "Nike",
+              shoeModel: "Nike air max",
+              shoeImage: "images/shoe.jpg",
+            ),
+          ],
+        ))
+      ],
     );
   }
 }
