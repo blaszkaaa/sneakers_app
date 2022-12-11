@@ -25,12 +25,12 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color.fromARGB(45, 255, 255, 255),
         animationDuration: Duration(milliseconds: 500),
-        buttonBackgroundColor: Colors.orange,
+        buttonBackgroundColor: Color.fromARGB(255, 249, 178, 1),
         animationCurve: Curves.fastLinearToSlowEaseIn,
-        height: 70,
-        color: Colors.orange,
+        height: 50,
+        color: Color.fromARGB(255, 249, 178, 1),
         items: const <Widget>[
           Icon(
             Icons.home_outlined,

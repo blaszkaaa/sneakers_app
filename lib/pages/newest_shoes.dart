@@ -18,9 +18,10 @@ class NewShoes extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(left: 18.0),
           child: Container(
-            height: 110,
+            height: 109,
             color: Color.fromARGB(255, 248, 248, 248),
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
                   padding: const EdgeInsets.all(12.0),
@@ -52,9 +53,11 @@ class NewShoes extends StatelessWidget {
                         width: 100,
                         height: 30,
                         child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              print("object+$shoeModel");
+                            },
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.orange,
+                              primary: Color.fromARGB(255, 249, 178, 1),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(8),
                               ),
@@ -72,6 +75,7 @@ class NewShoes extends StatelessWidget {
                 Image.asset(
                   shoeImage,
                   scale: 1.5,
+                  height: 100,
                 )
               ],
             ),

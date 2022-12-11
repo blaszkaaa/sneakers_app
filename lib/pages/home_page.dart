@@ -6,7 +6,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: [
         Padding(
           padding: const EdgeInsets.only(top: 35.0, left: 20, right: 20),
@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 20,
-                    backgroundColor: Color.fromARGB(255, 172, 169, 169),
+                    backgroundColor: const Color.fromARGB(255, 172, 169, 169),
                     child: Image.asset("images/avatar.jpg"),
                   )
                 ],
@@ -39,7 +39,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 20, right: 20, top: 65),
+          padding: const EdgeInsets.only(left: 20, right: 20, top: 35),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -69,7 +69,7 @@ class HomePage extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.orange,
+                    primary: Color.fromARGB(255, 249, 178, 1),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                     ),
@@ -112,7 +112,7 @@ class HomePage extends StatelessWidget {
                 child: Text(
                   "See more",
                   style: TextStyle(
-                    color: Colors.orange,
+                    color: Color.fromARGB(255, 249, 178, 1),
                     fontSize: 18,
                     fontWeight: FontWeight.w500,
                   ),
@@ -121,28 +121,86 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
-        Expanded(
+        SizedBox(
+          height: 109,
+          child: Expanded(
             child: ListView(
-          scrollDirection: Axis.horizontal,
-          padding: const EdgeInsets.only(bottom: 100),
-          children: [
-            NewShoes(
-              shoeName: "Nike",
-              shoeModel: "Nike air max",
-              shoeImage: "images/shoe.jpg",
+              shrinkWrap: true,
+              scrollDirection: Axis.horizontal,
+              children: [
+                NewShoes(
+                  shoeName: "Nike",
+                  shoeModel: "Nike Air Max",
+                  shoeImage: "images/shoe.jpg",
+                ),
+                NewShoes(
+                  shoeName: "Nike",
+                  shoeModel: "Nike Air Force 1",
+                  shoeImage: "images/shoe2.jpg",
+                ),
+                NewShoes(
+                  shoeName: "Nike",
+                  shoeModel: "Nike Streakfly",
+                  shoeImage: "images/shoe3.jpg",
+                ),
+              ],
             ),
-            NewShoes(
-              shoeName: "Nike",
-              shoeModel: "Nike air max",
-              shoeImage: "images/shoe.jpg",
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 20.0, right: 20, top: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: const [
+              Text(
+                "Popular",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              TextButton(
+                onPressed: null,
+                child: Text(
+                  "See more",
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 249, 178, 1),
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 109,
+          child: Expanded(
+            child: ListView(
+              shrinkWrap: true,
+              scrollDirection: Axis.horizontal,
+              children: [
+                NewShoes(
+                  shoeName: "Nike",
+                  shoeModel: "Nike Streakfly",
+                  shoeImage: "images/shoe3.jpg",
+                ),
+                NewShoes(
+                  shoeName: "Nike",
+                  shoeModel: "Nike Air Force 1",
+                  shoeImage: "images/shoe2.jpg",
+                ),
+                NewShoes(
+                  shoeName: "Nike",
+                  shoeModel: "Nike Air Max",
+                  shoeImage: "images/shoe.jpg",
+                ),
+              ],
             ),
-            NewShoes(
-              shoeName: "Nike",
-              shoeModel: "Nike air max",
-              shoeImage: "images/shoe.jpg",
-            ),
-          ],
-        ))
+          ),
+        ),
       ],
     );
   }
