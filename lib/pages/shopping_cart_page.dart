@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-class ShoppingCartPage extends StatelessWidget {
-  ShoppingCartPage({Key? key}) : super(key: key);
+class ShopingCartPage extends StatefulWidget {
+  const ShopingCartPage({Key? key}) : super(key: key);
 
+  @override
+  State<ShopingCartPage> createState() => _ShopingCartPageState();
+}
+
+class _ShopingCartPageState extends State<ShopingCartPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

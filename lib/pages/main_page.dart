@@ -16,11 +16,6 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   var _selectedIndex = 0;
 
-  final List<StatelessWidget> _pages = [
-    HomePage(),
-    ShoppingCartPage(),
-    SettingsPage(),
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +50,7 @@ class _MainPageState extends State<MainPage> {
         },
       ),
       backgroundColor: Colors.white,
-      body: _pages[_selectedIndex],
+      body: null,
     );
   }
 }
