@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:sneakers_app/pages/home_page.dart';
-import 'package:sneakers_app/pages/search_page.dart';
+import 'package:sneakers_app/pages/shopping_cart_page.dart';
 import 'package:sneakers_app/pages/settings_page.dart';
 
 class MainPage extends StatefulWidget {
@@ -18,7 +18,7 @@ class _MainPageState extends State<MainPage> {
 
   final List<StatelessWidget> _pages = [
     HomePage(),
-    SerachPage(),
+    ShoppingCartPage(),
     SettingsPage(),
   ];
   @override
@@ -35,17 +35,17 @@ class _MainPageState extends State<MainPage> {
           Icon(
             Icons.home_outlined,
             size: 25,
-            color: Colors.black,
+            color: Colors.white,
           ),
           Icon(
-            Icons.search,
+            Icons.shopping_bag_outlined,
             size: 25,
-            color: Colors.black,
+            color: Colors.white,
           ),
           Icon(
             Icons.settings,
             size: 25,
-            color: Colors.black,
+            color: Colors.white,
           ),
         ],
         onTap: (index) {

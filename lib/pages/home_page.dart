@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sneakers_app/pages/newest_shoes.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:sneakers_app/util/newest_shoes.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

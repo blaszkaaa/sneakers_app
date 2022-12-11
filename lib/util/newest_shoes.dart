@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:sneakers_app/data/database.dart';
 
 class NewShoes extends StatelessWidget {
   final String shoeName;
@@ -53,8 +55,8 @@ class NewShoes extends StatelessWidget {
                         width: 100,
                         height: 30,
                         child: ElevatedButton(
-                            onPressed: () {
-                              print("object+$shoeModel");
+                            onPressed: () async {
+                              AddShoe();
                             },
                             style: ElevatedButton.styleFrom(
                               primary: Color.fromARGB(255, 249, 178, 1),

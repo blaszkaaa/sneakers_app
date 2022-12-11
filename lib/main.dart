@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'splash screen.dart';
 
-import 'pages/splash screen.dart';
+void main() async {
+  await Hive.initFlutter();
 
-void main() {
+  var box = await Hive.openBox("cart");
+
   runApp(const MyApp());
 }
 
