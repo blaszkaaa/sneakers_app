@@ -1,8 +1,8 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_print
+// ignore: file_names
+// ignore_for_file: file_names, duplicate_ignore, avoid_print
 
 import 'package:flutter/material.dart';
 import 'package:slide_action/slide_action.dart';
-import 'package:flutter_responsive/flutter_responsive.dart';
 import 'package:sneakers_app/home_pages_UltraWideLayout/login_page.dart';
 
 class SplashScreenUltra extends StatefulWidget {
@@ -102,7 +102,7 @@ class _SplashScreenUltraState extends State<SplashScreenUltra> {
                 return Container(
                   margin: const EdgeInsets.all(4),
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 255, 162, 22),
+                    color: const Color.fromARGB(255, 255, 162, 22),
                     borderRadius: BorderRadius.circular(36),
                   ),
                   child: const Center(
@@ -118,7 +118,7 @@ class _SplashScreenUltraState extends State<SplashScreenUltra> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => LoginPageUltra(),
+                    builder: (context) => const LoginPageUltra(),
                   ),
                 );
                 print("2");

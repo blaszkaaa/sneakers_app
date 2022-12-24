@@ -16,7 +16,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   var index = 0;
   final _buildBody = <Widget>[
-    HomePage(),
+    const HomePage(),
     const ShopingCartPage(),
     const SettingsPage()
   ];

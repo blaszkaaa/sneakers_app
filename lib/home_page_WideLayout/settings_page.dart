@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -269,7 +271,7 @@ class SettingsPage extends StatelessWidget {
                           onPressed: () {
                             print("Next page");
                           },
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.arrow_forward_ios_rounded,
                             color: Colors.grey,
                           ),

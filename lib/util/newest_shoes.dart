@@ -1,5 +1,6 @@
+// ignore_for_file: unnecessary_string_interpolations, avoid_print
+
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 
 class NewShoes extends StatelessWidget {
   final String shoeName;
@@ -8,11 +9,12 @@ class NewShoes extends StatelessWidget {
   static String shoesName = '';
   static String shoesModel = '';
   static String shoesImage = '';
-  NewShoes({
+  const NewShoes({
+    Key? key,
     required this.shoeName,
     required this.shoeModel,
     required this.shoeImage,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class NewShoes extends StatelessWidget {
           padding: const EdgeInsets.only(left: 18.0),
           child: Container(
             height: 109,
-            color: Color.fromARGB(255, 248, 248, 248),
+            color: const Color.fromARGB(255, 248, 248, 248),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -63,7 +65,7 @@ class NewShoes extends StatelessWidget {
                               shoesImage = shoeImage;
                             },
                             style: ElevatedButton.styleFrom(
-                              primary: Color.fromARGB(255, 249, 178, 1),
+                              primary: const Color.fromARGB(255, 249, 178, 1),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(8),
                               ),

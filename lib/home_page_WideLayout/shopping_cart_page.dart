@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 import 'package:sneakers_app/util/my_cart.dart';
 
 import '../util/newest_shoes.dart';
