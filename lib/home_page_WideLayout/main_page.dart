@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:sneakers_app/pages/home_page.dart';
-import 'package:sneakers_app/pages/shopping_cart_page.dart';
-import 'package:sneakers_app/pages/settings_page.dart';
+import 'package:sneakers_app/home_page_WideLayout/home_page.dart';
+import 'package:sneakers_app/home_page_WideLayout/settings_page.dart';
+import 'package:sneakers_app/home_page_WideLayout/shopping_cart_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -14,18 +14,22 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  var _selectedIndex = 0;
-
+  var index = 0;
+  final _buildBody = <Widget>[
+    HomePage(),
+    const ShopingCartPage(),
+    const SettingsPage()
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Color.fromARGB(45, 255, 255, 255),
-        animationDuration: Duration(milliseconds: 500),
-        buttonBackgroundColor: Color.fromARGB(255, 249, 178, 1),
+        backgroundColor: const Color.fromARGB(45, 255, 255, 255),
+        animationDuration: const Duration(milliseconds: 500),
+        buttonBackgroundColor: const Color.fromARGB(255, 249, 178, 1),
         animationCurve: Curves.fastLinearToSlowEaseIn,
         height: 50,
-        color: Color.fromARGB(255, 249, 178, 1),
+        color: const Color.fromARGB(255, 249, 178, 1),
         items: const <Widget>[
           Icon(
             Icons.home_outlined,
@@ -43,14 +47,14 @@ class _MainPageState extends State<MainPage> {
             color: Colors.white,
           ),
         ],
-        onTap: (index) {
+        onTap: (x) {
           setState(() {
-            _selectedIndex = index;
+            index = x;
           });
         },
       ),
       backgroundColor: Colors.white,
-      body: null,
+      body: _buildBody[index],
     );
   }
 }

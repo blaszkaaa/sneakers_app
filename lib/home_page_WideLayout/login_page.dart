@@ -41,14 +41,14 @@ class _LoginPageState extends State<LoginPage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.all(24.0),
+            padding: const EdgeInsets.only(left: 24.0),
             child: Image.asset(
               "images/nike_logo.png",
-              scale: 1.4,
+              scale: 1.6,
             ),
           ),
           const Padding(
-            padding: EdgeInsets.only(left: 24, top: 10, bottom: 18),
+            padding: EdgeInsets.only(left: 24, top: 1, bottom: 14),
             child: Text(
               "Hey,\nLogin now.",
               style: TextStyle(
@@ -152,7 +152,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 18.0, left: 100, right: 100),
+            padding: const EdgeInsets.only(top: 14.0, left: 100, right: 100),
             child: Center(
               child: EasyButton(
                 type: EasyButtonType.elevated,
@@ -181,7 +181,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           const Padding(
-            padding: EdgeInsets.only(top: 8.0),
+            padding: EdgeInsets.only(top: 4.0),
             child: Center(
               child: TextButton(
                 onPressed: null,

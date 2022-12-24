@@ -2,17 +2,17 @@
 
 import 'package:flutter/material.dart';
 import 'package:slide_action/slide_action.dart';
+import 'package:flutter_responsive/flutter_responsive.dart';
+import 'package:sneakers_app/home_pages_UltraWideLayout/login_page.dart';
 
-import 'pages/login_page.dart';
-
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+class SplashScreenUltra extends StatefulWidget {
+  const SplashScreenUltra({Key? key}) : super(key: key);
 
   @override
-  State<SplashScreen> createState() => _SplashScreenState();
+  State<SplashScreenUltra> createState() => _SplashScreenUltraState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashScreenUltraState extends State<SplashScreenUltra> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -118,7 +118,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => LoginPage(),
+                    builder: (context) => LoginPageUltra(),
                   ),
                 );
                 print("2");
