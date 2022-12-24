@@ -17,7 +17,7 @@ class _MainPageUltraState extends State<MainPageUltra> {
   var index = 0;
   final _buildBody = <Widget>[
     HomePageUltra(),
-    const ShopingCartPageUltra(),
+    ShopingCartPageUltra(),
     const SettingsPageUltra()
   ];
   @override

@@ -5,7 +5,9 @@ class NewShoes extends StatelessWidget {
   final String shoeName;
   final String shoeModel;
   final String shoeImage;
-
+  static String shoesName = '';
+  static String shoesModel = '';
+  static String shoesImage = '';
   NewShoes({
     required this.shoeName,
     required this.shoeModel,
@@ -56,6 +58,9 @@ class NewShoes extends StatelessWidget {
                         child: ElevatedButton(
                             onPressed: () async {
                               print("$shoeModel");
+                              shoesName = shoeModel;
+                              shoesModel = shoeModel;
+                              shoesImage = shoeImage;
                             },
                             style: ElevatedButton.styleFrom(
                               primary: Color.fromARGB(255, 249, 178, 1),
