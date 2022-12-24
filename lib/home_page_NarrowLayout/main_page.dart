@@ -16,8 +16,8 @@ class MainPageUltra extends StatefulWidget {
 class _MainPageUltraState extends State<MainPageUltra> {
   var index = 0;
   final _buildBody = <Widget>[
-    HomePageUltra(),
-    ShopingCartPageUltra(),
+    const HomePageUltra(),
+    const ShopingCartPageUltra(),
     const SettingsPageUltra()
   ];
   @override

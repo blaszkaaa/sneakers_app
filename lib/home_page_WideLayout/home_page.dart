@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 import 'package:sneakers_app/util/newest_shoes.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +69,7 @@ class HomePage extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    primary: Color.fromARGB(255, 249, 178, 1),
+                    primary: const Color.fromARGB(255, 249, 178, 1),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                     ),
@@ -128,7 +127,7 @@ class HomePage extends StatelessWidget {
             child: ListView(
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
-              children: [
+              children: const [
                 NewShoes(
                   shoeName: "Nike",
                   shoeModel: "Nike Air Max",
@@ -182,7 +181,7 @@ class HomePage extends StatelessWidget {
             child: ListView(
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
-              children: [
+              children: const [
                 NewShoes(
                   shoeName: "Nike",
                   shoeModel: "Nike Streakfly",

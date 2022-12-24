@@ -1,8 +1,7 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_print
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_print, file_names
 
 import 'package:flutter/material.dart';
 import 'package:slide_action/slide_action.dart';
-import 'package:flutter_responsive/flutter_responsive.dart';
 import 'package:sneakers_app/home_pages_UltraWideLayout/login_page.dart';
 
 class SplashScreenUltra extends StatefulWidget {

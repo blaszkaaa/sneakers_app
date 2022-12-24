@@ -27,7 +27,7 @@ class _LoginPageUltraState extends State<LoginPageUltra> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => MainPageUltra(),
+          builder: (context) => const MainPageUltra(),
         ),
       );
     };

@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 
 class SettingsPageUltra extends StatelessWidget {
@@ -15,7 +17,7 @@ class SettingsPageUltra extends StatelessWidget {
               padding: const EdgeInsets.only(top: 30.0),
               child: CircleAvatar(
                 radius: 40,
-                backgroundColor: Color.fromARGB(255, 255, 255, 255),
+                backgroundColor: const Color.fromARGB(255, 255, 255, 255),
                 child: Image.asset("images/avatar.jpg"),
               ),
             ),
@@ -55,7 +57,7 @@ class SettingsPageUltra extends StatelessWidget {
                   ),
                 ),
                 child: Row(
-                  children: [
+                  children: const [
                     Text("Edit profile"),
                     Icon(Icons.arrow_forward_ios_rounded)
                   ],
@@ -96,7 +98,7 @@ class SettingsPageUltra extends StatelessWidget {
                       onPressed: () {
                         print("Next page");
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_forward_ios_rounded,
                         color: Colors.grey,
                       ),
@@ -139,7 +141,7 @@ class SettingsPageUltra extends StatelessWidget {
                       onPressed: () {
                         print("Next page");
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_forward_ios_rounded,
                         color: Colors.grey,
                       ),
@@ -182,7 +184,7 @@ class SettingsPageUltra extends StatelessWidget {
                       onPressed: () {
                         print("Next page");
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_forward_ios_rounded,
                         color: Colors.grey,
                       ),
@@ -225,7 +227,7 @@ class SettingsPageUltra extends StatelessWidget {
                       onPressed: () {
                         print("Next page");
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_forward_ios_rounded,
                         color: Colors.grey,
                       ),
@@ -268,7 +270,7 @@ class SettingsPageUltra extends StatelessWidget {
                       onPressed: () {
                         print("Next page");
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_forward_ios_rounded,
                         color: Colors.grey,
                       ),

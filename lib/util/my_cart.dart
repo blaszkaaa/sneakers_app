@@ -6,12 +6,13 @@ class MyCart extends StatelessWidget {
   final String shoeImage;
   final String shoeAmount;
 
-  MyCart({
+  const MyCart({
+    Key? key,
     required this.shoeName,
     required this.shoeModel,
     required this.shoeImage,
     required this.shoeAmount,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class MyCart extends StatelessWidget {
       width: 269,
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           Padding(
@@ -27,7 +28,7 @@ class MyCart extends StatelessWidget {
             child: Container(
               alignment: Alignment.center,
               height: 109,
-              color: Color.fromARGB(255, 248, 248, 248),
+              color: const Color.fromARGB(255, 248, 248, 248),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -59,7 +60,7 @@ class MyCart extends StatelessWidget {
                         ),
                         Row(
                           children: [
-                            Padding(
+                            const Padding(
                               padding: EdgeInsets.only(bottom: 8.0),
                               child: Text(
                                 "Amount: ",
@@ -70,10 +71,10 @@ class MyCart extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(bottom: 8.0),
+                              padding: const EdgeInsets.only(bottom: 8.0),
                               child: Text(
                                 shoeAmount,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w500,
                                 ),
